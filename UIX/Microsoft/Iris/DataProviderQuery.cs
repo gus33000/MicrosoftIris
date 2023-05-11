@@ -90,6 +90,24 @@ namespace Microsoft.Iris
             return null;
         }
 
+        public virtual bool TryGetProperty<T>(string propertyName, out T value)
+        {
+            lock (SynchronizedPropertyStorage)
+            {
+                if (_propertyValues != null)
+                {
+                    object obj;
+                    if (_propertyValues.TryGetValue(propertyName, out obj))
+                    {
+                        value = (T)obj;
+                        return true;
+                    }
+                }
+            }
+            value = default(T);
+            return false;
+        }
+
         public virtual void SetProperty(string propertyName, object value)
         {
             bool flag1 = false;

@@ -2,6 +2,7 @@
 
     <PropertyGroup>
         <RootNamespace>Microsoft.Iris.Debug</RootNamespace>
+		<TargetFrameworks>net6.0</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>

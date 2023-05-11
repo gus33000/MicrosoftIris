@@ -6,5 +6,6 @@
         <AssemblyName>UIX.RenderApi</AssemblyName>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<TargetFrameworks>net6.0</TargetFrameworks>
     </PropertyGroup>
 </Project>
